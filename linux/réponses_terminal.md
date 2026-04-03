@@ -71,35 +71,50 @@ R=>
 
 • trouver tous les fichiers .log 
 
-ls *.log : permet de lister et de chercher uniquement les fichiers qui ont l' extension <<.log>>
+                                ls *.log 
+Permet de lister et de chercher uniquement les fichiers qui ont l' extension <<.log>>
 
 
 • trouver tous les fichiers de plus de 5 Mo
 
-find . -type f -size +5M : permet de chercher tous les fichiers mais uniquement ceux qui ont plus de 5M.
+                               find . -type f -size +5M 
+Permet de chercher tous les fichiers mais uniquement ceux qui ont plus de 5M.
 
 • trouver tous les fichiers modifiés il y a moins de 2 jours
 
-find . - type f -mtime -2 : cherche tous les fichiers mais seulement ceux qui sont modifiés il y a moins de 2  jours.
+                              find . - type f -mtime -2 
+cherche tous les fichiers mais seulement ceux qui sont modifiés il y a moins de 2  jours.
 
 • supprimer uniquement les fichiers .tmp
 
-rm *.tmp : va supprimer seulement les fichiers qui ont l' extension <<.tmp>>
+                                         rm *.tmp 
+Va supprimer seulement les fichiers qui ont l' extension <<.tmp>>
 
 
-_______________________________________________________________________
+________________________________________________________________________________________
 
 4.Analyse de contenu
 
- head -n 5 compte.txt
 
- tail -n 5 compte.txt
+• afficher les 5 premières lignes
 
- wc -l compte.txt
+                           head -n 5 compte.txt
+                           
+• afficher les 5 dernières lignes
 
- grep "ERROR" compte.txt
+                           tail -n 5 compte.txt
+                           
+• compter le nombre total de lignes
+                           
+                            wc -l compte.txt
+                            
+• rechercher toutes les lignes contenant le mot ERROR
 
- grep -o server compte.txt | wc -l
+                            grep "ERROR" compte.txt
+                            
+• compter combien de fois le mot server apparaît
+                                
+                            grep -o server compte.txt | wc -l
 
 
 _______________________________________________________________________
