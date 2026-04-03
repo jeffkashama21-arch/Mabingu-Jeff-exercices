@@ -43,4 +43,12 @@ R=> Création d'arborescence
 8. pwd : enfin, nous avons utilisé cette commande pour afficher toute
          l'arborescence .
         
-    
+ NB : Q\ questions et R => : réponses   
+______________________________________________________________________________________________
+
+
+2. Gestion des permissions
+
+Q\ Expliquez la signification du mode de permission utilisé.
+
+R=> 
