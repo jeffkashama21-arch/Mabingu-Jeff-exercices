@@ -1,0 +1,178 @@
+1. Navigation et structure Linux
+
+Q/ Expliquez brièvement chaque commande utilisée.
+
+R=> Création d'arborescence 
+    Commandes utilisées :
+
+              
+
+1. mkdir : commande qui permet la création d'un dossier . Donc pour la création de
+           nos dossiers de l' arborescence on va utiliser cette commande.
+
+                              mkdir projet-linux
+
+2. cd : on utilise cette commande pour accéder dans le dossier <<projet-linux>>
+        car c'est la commande qui nous permet de naviguer dans un dossier.
+
+                                 cd projet-linux
+
+3. Étant dans le dossier <<projet-linux>> on va encore utiliser mkdir pour créer les
+   autres dossiers de l' arborescence
+
+                       mkdir scripts_logs_sauvergardes_utilisateurs
+
+4. cd : on utilise encore cette commande pour accéder au dossier <<logs>> créé
+         dans le dossier <<projet-linux>>
+
+                                        cd logs
+
+5. touch : après avoir accéder dans le dossier <<logs>>, on utilise cette commande
+           Pour créer nos 3 fichiers. Car c'est la commande qui permet la création d'un                   fichier.
+
+                           touch fichier1.txt_fichier2.txt_fichier3.txt
+
+6. cd ../ scripts : ensuite nous avons utilisé cette commande pour quitter le dossier
+                    <<logs>> pour aller directement dans le dossier <<scripts>>.
+
+7. touch : une fois dans le dossier <<scripts>>, nous avons aussi utilisé cette
+           commande pour créer 2 fichiers.
+
+                                   touch fichier1.txt_fichier2.txt
+
+8. pwd : enfin, nous avons utilisé cette commande pour afficher toute
+         l'arborescence .
+        
+ NB : Q\ questions et R => : réponses   
+______________________________________________________________________________________________
+
+
+2. Gestion des permissions
+
+Q\ Expliquez la signification du mode de permission utilisé.
+
+R=> Commande utilisée :
+
+   1. touch :  pour  créer le fichier <<deploy.sh>>
+   
+                             touch deploy.sh
+  
+   2. chmod  750  : une fois le fichier  <<deploy.sh>> créé, nous avons utilisé cette commande                     pour lui donner le droit de permission de lecture, d' écriture et d'                           exécution pour le propriétaire; pour lui donner le droit de permission de                      lecture et d' exécution pour le groupe et enfin pour lui retirer tous les                      droits de permission aux autres utilisateurs. 
+
+                            chmod  750  deploy.sh
+
+   En utilisant le chiffre, le 7 va donner le droit de permission rwx au propriétaire; le 5 va    donner le droit de permission r-x au groupe et le 0 va retirer tous les droits aux autres      utilisateurs du fichier.
+   
+_______________________________________________________________________
+
+3.Recherche avancée de fichiers
+
+R=>
+
+• trouver tous les fichiers .log 
+
+ls *.log : permet de lister et de chercher uniquement les fichiers qui ont l' extension <<.log>>
+
+
+• trouver tous les fichiers de plus de 5 Mo
+
+find . -type f -size +5M : permet de chercher tous les fichiers mais uniquement ceux qui ont plus de 5M.
+
+• trouver tous les fichiers modifiés il y a moins de 2 jours
+
+find . - type f -mtime -2 : cherche tous les fichiers mais seulement ceux qui sont modifiés il y a moins de 2  jours.
+
+• supprimer uniquement les fichiers .tmp
+
+rm *.tmp : va supprimer seulement les fichiers qui ont l' extension <<.tmp>>
+
+
+_______________________________________________________________________
+
+4.Analyse de contenu
+
+ head -n 5 compte.txt
+
+ tail -n 5 compte.txt
+
+ wc -l compte.txt
+
+ grep "ERROR" compte.txt
+
+ grep -o server compte.txt | wc -l
+
+
+_______________________________________________________________________
+
+
+5.Redirection et pipes
+
+
+ ls > fichiers.txt
+
+ date >> fichiers.txt
+
+ grep -E .sh$ fichiers.txt
+
+ ls *.txt | wc -l
+
+
+La différence entre > et >> : la redirection > redirige la sortie vers un fichier et écrase ce qui existe déjà. Et la redirection >> ajoute sans écraser le contenu qui existe ou ajoute à la fin du fichier.
+
+
+_______________________________________________________________________
+
+
+6.Processus Linux
+
+ top
+
+ ps aux | grep ssh
+
+ Difference entre PID et PPID : Le PID (Process IDentifier) c'est le numéro unique attribué à un processus en cours d'exécution sous Linux. Mais le PPID (Parent Process IDentifier) est le PID du processus « parent », c'est-à-dire celui qui a lancé le processus actuel. Le PID identifie le processus lui-même, tandis que le PPID identifie son créateur.
+
+ kill <PID>
+
+ kill -9 <PID>
+
+
+_______________________________________________________________________
+
+7.Gestion disque et espaceplei
+
+ df -h
+
+ du -sh /home/user/dossier
+
+ du -ah /home | sort -rh | head -n 5
+
+ df -h : en utilisant cette commande, puis on regarde la ligne où est mentionnée <</dev/sda1>> et ensuite on regarde la colonne qui indique le pourcentage d’utilisation du disque mentionné par <<uti%>>. Si le pourcentage est de plus de 90%, cela nous permettra directement de détecter que le serveur linux est presque plein.
+
+_______________________________________________________________________
+
+
+8.Utilisateurs et groupes
+
+ En utilisant le mode privilégié Via la commande <<sudo su>> et ensuite étant dans le privilégié on utilise la commande <<adduser>>.
+
+                 Exemple : sudo su 
+                           adduser jeffuser
+                           
+ On utilise la commande <<sudo groupadd>> . Et dans notre cas pour créer un groupe nommé devops on procédera de la manière suivante :
+
+                         sudo groupadd devops
+                         
+ On va utiliser cette commande <<sudo usermod -aG >> afin d'ajouter un
+utilisateur à notre groupe créé. Et on procédera de la manière suivante :
+                           sudo usermod -aG devops Paul
+                           
+ Pour vérifier les groupes d'un utilisateur on va utiliser la commande suivante :
+                                   groups Paul
+                                   
+ La bonne gestion des groupes est importante en sécurité parce qu'elle permettra de renforcer la sécurité (seuls les utilisateurs autorisés accèdent aux fichiers),une gestion facile (on modifie les droits une seule fois pour tout le groupe),moins d’erreurs (évite de donner trop de permissions) et une organisation claire (chaque rôle a ses accès)
+
+
+
+
+
+
