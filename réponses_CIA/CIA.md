@@ -21,21 +21,21 @@
 
 • Donnez au moins 4 mesures de sécurité pour corriger ce problème.
 
-  Les 4 mesures de sécurité :
+   Les 4 mesures de sécurité :
 
-  1. Mettre en place un système de permission d' accès aux équipements ou
+   1. Mettre en place un système de permission d' accès aux équipements ou
      aux dossiers sensibles(génération des mots passe)
 
 
-  2. Chiffrement des fichiers sensibles ( si il y a violation des mots de passe,les données        restent illisible sans autorisation).
+   2. Chiffrement des fichiers sensibles ( si il y a violation des mots de passe,les données        restent illisible sans autorisation).
 
 
-  3. Mettre ces fichiers sensibles dans les dossiers hors de partage public
-     public.
+   3. Mettre ces fichiers sensibles dans les dossiers hors de partage
+      public.
 
 
-  4. Utiliser l’authentification et les rôles (donner des accès selon le rôle. Donc,
-  celui des utilisateurs internes diffère de celui des stagiaires.
+  5. Utiliser l’authentification et les rôles (donner des accès selon le rôle. Donc,
+     celui des utilisateurs internes diffère de celui des stagiaires.
 
 
 ______________________________________________________________________________________________
@@ -51,28 +51,42 @@ ________________________________________________________________________________
   
 • Pourquoi ?
   
-  # Parce qu'il y a modification des données et elles deviennent non fiables et non exactes.
+   Parce qu'il y a modification des données et elles deviennent non fiables et non exactes.
 
 
-  Mauvaises décisions de gestion (réapprovisionnement incorrect). Il peut y avoir ruptures       de stock ou au contraire surstock.
+• Quelle peut être la conséquence métier ?
+
+   Mauvaises décisions de gestion (réapprovisionnement incorrect). Il peut y avoir ruptures      de stock ou au contraire surstock.
 
 
- Les 4 contrôles permettant de protéger l’intégrité des données
-peuvent être :
 
-1. Le contrôle d’accès stric. C'est-à-dire seuls les utilisateurs autorisés peuvent modifier les données.
+• Citez au moins 4 contrôles permettant de protéger l’intégrité des données.
 
-2. Journalisation et audit (logs). Donc, enregistrer toutes les modifications pour détecter et retracer les actions suspectes.
+   Les 4 contrôles permettant de protéger l’intégrité des données
+   peuvent être :
 
-3. Validation des données (empêcher l’entrée de données incohérentes ou
-incorrectes).
+  1. Le contrôle d’accès stric. C'est-à-dire seuls les utilisateurs autorisés peuvent              modifier les données.
 
-4. Contrôle d’intégrité. C'est-à-dire mettre au point un système qui permet
-de Vérifier que les données n’ont pas été altérées.
+  2. Journalisation et audit (logs). Donc, enregistrer toutes les modifications pour détecter      et retracer les actions suspectes.
+
+  3. Validation des données (empêcher l’entrée de données incohérentes ou
+     incorrectes).
+
+  4. Contrôle d’intégrité. C'est-à-dire mettre au point un système qui permet
+     de Vérifier que les données n’ont pas été altérées.
+
+
+
+
+
+______________________________________________________________________________________________
+
 
 
 
 29. Scénario CIA – Disponibilité
+
+
 
  Il s'agit de la disponibilité
 
