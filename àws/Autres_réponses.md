@@ -5,6 +5,10 @@
    retourner une réponse.
 
 
+
+
+
+
 • Expliquer brièvement dans quels cas une fonction Lambda est utile.
 
    Une fonction Lambda est utile en ce que : Applications sans serveur c'est-à-dire
