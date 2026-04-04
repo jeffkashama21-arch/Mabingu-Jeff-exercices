@@ -53,6 +53,8 @@ R=> Création d'arborescence
 ______________________________________________________________________________________________
 
 
+
+
 2. Gestion des permissions
 
 Q\ Expliquez la signification du mode de permission utilisé.
@@ -71,9 +73,12 @@ R=> Commande utilisée :
    
 _______________________________________________________________________
 
+
+
+
+
 3.Recherche avancée de fichiers
 
-R=>
 
 • trouver tous les fichiers .log 
 
@@ -105,6 +110,10 @@ Va supprimer seulement les fichiers qui ont l' extension <<.tmp>>
 
 ________________________________________________________________________________________
 
+
+
+
+
 4.Analyse de contenu
 
 
@@ -132,11 +141,12 @@ ________________________________________________________________________________
 _______________________________________________________________________
 
 
+
+
+
+
+
 5.Redirection et pipes
-
-
-
-
 
 
 • listez les fichiers du répertoire courant et redirigez la sortie vers fichiers.txt
@@ -157,7 +167,7 @@ _______________________________________________________________________
 
 Expliquez la différence entre > et >>.
 
-    La différence entre > et >> : la redirection > redirige la sortie vers un fichier et          écrase ce qui existe déjà. Et la redirection >> ajoute sans écraser le contenu qui existe     ou ajoute à la fin du fichier.
+  La différence entre > et >> : la redirection > redirige la sortie vers un fichier et          écrase ce qui existe déjà. Et la redirection >> ajoute sans écraser le contenu qui existe     ou ajoute à la fin du fichier.
 
 
 _______________________________________________________________________
@@ -175,7 +185,7 @@ _______________________________________________________________________
 
 expliquez la différence entre PID et PPID
 
-     Difference entre PID et PPID : Le PID (Process IDentifier) c'est le numéro unique             attribué à un processus en cours d'exécution sous Linux. Mais le PPID (Parent Process         IDentifier) est le PID du processus « parent », c'est-à-dire celui qui a lancé le             processus actuel. Le PID identifie le processus lui-même, tandis que le PPID identifie        son créateur.
+Difference entre PID et PPID : Le PID (Process IDentifier) c'est le numéro unique             attribué à un processus en cours d'exécution sous Linux. Mais le PPID (Parent Process         IDentifier) est le PID du processus « parent », c'est-à-dire celui qui a lancé le             processus actuel. Le PID identifie le processus lui-même, tandis que le PPID identifie        son créateur.
 
 
 
@@ -195,38 +205,52 @@ _______________________________________________________________________
 
 7.Gestion disque et espaceplei
 
+• afficher l’espace disque total et disponible
+
+           df -h
+
+• afficher la taille d’un dossier précis
+
+          du -sh /home/user/dossier
+
+• identifier les 5 plus gros fichiers d’un répertoire
+
+          du -ah /home | sort -rh | head -n 5
+
+• expliquer comment détecter rapidement qu’un serveur Linux est presque plein
+
+df -h : en utilisant cette commande, puis on regarde la ligne où est mentionnée <</dev/sda1>> et ensuite on regarde la colonne qui indique le pourcentage d’utilisation du disque mentionné par <<uti%>>. Si le pourcentage est de plus de 90%, cela nous permettra directement de détecter que le serveur linux est presque plein.
 
 
- df -h
-
- du -sh /home/user/dossier
-
- du -ah /home | sort -rh | head -n 5
-
- df -h : en utilisant cette commande, puis on regarde la ligne où est mentionnée <</dev/sda1>> et ensuite on regarde la colonne qui indique le pourcentage d’utilisation du disque mentionné par <<uti%>>. Si le pourcentage est de plus de 90%, cela nous permettra directement de détecter que le serveur linux est presque plein.
 
 _______________________________________________________________________
 
 
+
+
+
+
 8.Utilisateurs et groupes
 
- En utilisant le mode privilégié Via la commande <<sudo su>> et ensuite étant dans le privilégié on utilise la commande <<adduser>>.
+• En utilisant le mode privilégié Via la commande << sudo su >> et ensuite étant dans le        privilégié on utilise la commande <<adduser>>.
 
                  Exemple : sudo su 
                            adduser jeffuser
                            
- On utilise la commande <<sudo groupadd>> . Et dans notre cas pour créer un groupe nommé devops on procédera de la manière suivante :
+• On utilise la commande << sudo groupadd >> . Et dans notre cas pour créer un groupe nommé       devops on procédera de la manière suivante :
 
                          sudo groupadd devops
                          
- On va utiliser cette commande <<sudo usermod -aG >> afin d'ajouter un
-utilisateur à notre groupe créé. Et on procédera de la manière suivante :
+• On va utiliser cette commande <<sudo usermod -aG >> afin d'ajouter un
+  utilisateur à notre groupe créé. Et on procédera de la manière suivante :
+
                            sudo usermod -aG devops Paul
                            
- Pour vérifier les groupes d'un utilisateur on va utiliser la commande suivante :
+• Pour vérifier les groupes d'un utilisateur on va utiliser la commande suivante :
+
                                    groups Paul
                                    
- La bonne gestion des groupes est importante en sécurité parce qu'elle permettra de renforcer la sécurité (seuls les utilisateurs autorisés accèdent aux fichiers),une gestion facile (on modifie les droits une seule fois pour tout le groupe),moins d’erreurs (évite de donner trop de permissions) et une organisation claire (chaque rôle a ses accès)
+• La bonne gestion des groupes est importante en sécurité parce qu'elle permettra de            renforcer  la sécurité (seuls les utilisateurs autorisés accèdent aux fichiers),une gestion   facile (on   modifie les droits une seule fois pour tout le groupe),moins d’erreurs (évite    de donner trop  de permissions) et une organisation claire (chaque rôle a ses accès)
 
 
 
