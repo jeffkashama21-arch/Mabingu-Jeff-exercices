@@ -81,15 +81,21 @@ R=>
 Permet de lister et de chercher uniquement les fichiers qui ont l' extension <<.log>>
 
 
+
+
 • trouver tous les fichiers de plus de 5 Mo
 
                                find . -type f -size +5M 
 Permet de chercher tous les fichiers mais uniquement ceux qui ont plus de 5M.
 
+
+
 • trouver tous les fichiers modifiés il y a moins de 2 jours
 
                               find . - type f -mtime -2 
 cherche tous les fichiers mais seulement ceux qui sont modifiés il y a moins de 2  jours.
+
+
 
 • supprimer uniquement les fichiers .tmp
 
@@ -151,28 +157,45 @@ _______________________________________________________________________
 
 Expliquez la différence entre > et >>.
 
-La différence entre > et >> : la redirection > redirige la sortie vers un fichier et écrase ce qui existe déjà. Et la redirection >> ajoute sans écraser le contenu qui existe ou ajoute à la fin du fichier.
+    La différence entre > et >> : la redirection > redirige la sortie vers un fichier et          écrase ce qui existe déjà. Et la redirection >> ajoute sans écraser le contenu qui existe     ou ajoute à la fin du fichier.
 
 
 _______________________________________________________________________
+
 
 
 6.Processus Linux
 
- top
+• affichez les processus en cour
 
- ps aux | grep ssh
+                    top
+• trouvez un processus spécifique par son nom
 
- Difference entre PID et PPID : Le PID (Process IDentifier) c'est le numéro unique attribué à un processus en cours d'exécution sous Linux. Mais le PPID (Parent Process IDentifier) est le PID du processus « parent », c'est-à-dire celui qui a lancé le processus actuel. Le PID identifie le processus lui-même, tandis que le PPID identifie son créateur.
+               ps aux | grep ssh
 
- kill <PID>
+expliquez la différence entre PID et PPID
 
- kill -9 <PID>
+     Difference entre PID et PPID : Le PID (Process IDentifier) c'est le numéro unique             attribué à un processus en cours d'exécution sous Linux. Mais le PPID (Parent Process         IDentifier) est le PID du processus « parent », c'est-à-dire celui qui a lancé le             processus actuel. Le PID identifie le processus lui-même, tandis que le PPID identifie        son créateur.
+
+
+
+• montrez comment arrêter proprement un processus
+
+                      kill <PID>
+
+• montrez comment forcer l’arrêt d’un processus
+
+                      kill -9 <PID>
 
 
 _______________________________________________________________________
 
+
+
+
 7.Gestion disque et espaceplei
+
+
 
  df -h
 
