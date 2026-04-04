@@ -51,9 +51,10 @@ ________________________________________________________________________________
   
 • Pourquoi ?
   
-  - Parce qu'il y a modification des données et elles deviennent non fiables et non exactes.
+  # Parce qu'il y a modification des données et elles deviennent non fiables et non exactes.
 
-  - Mauvaises décisions de gestion (réapprovisionnement incorrect). Il peut y avoir ruptures       de stock ou au contraire surstock.
+
+  Mauvaises décisions de gestion (réapprovisionnement incorrect). Il peut y avoir ruptures       de stock ou au contraire surstock.
 
 
  Les 4 contrôles permettant de protéger l’intégrité des données
