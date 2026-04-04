@@ -87,35 +87,41 @@ ________________________________________________________________________________
 29. Scénario CIA – Disponibilité
 
 
+• Quel pilier de la triade CIA est touché ?
 
- Il s'agit de la disponibilité
+   Il s'agit de la disponibilité
+   
+• Pourquoi ?
 
- Parce que les données ne sont plus disponibles en temps ou au moment voulu par les utilisateurs.
+   Parce que les données ne sont plus disponibles en temps ou au moment voulu par les            utilisateurs.
 
- Les conséquences techniques peuvent être : le site devient inaccessible, il y a pertes de requêtes et de transactions en cours.
-Les conséquences business peuvent être : la perte directe de revenus (pas de ventes), insatisfaction des clients, atteinte à l’image de marque et la perte de clients fidèles au profit de concurrents.
-
+   
+• Quelles sont les conséquences techniques et business ?
 
+   Les conséquences techniques peuvent être : le site devient inaccessible, il y a pertes de     requêtes et de transactions en cours.
 
-5 solutions pour améliorer la disponibilité du service :
-
-
-1. Mise en place d’un équilibrage de charge. C'est-à-dire répartir le
-trafic sur plusieurs serveurs pour éviter les surcharges.
-
-2. Protection contre les attaques DDoS. Donc, filtrer le trafic
-malveillant qui peut provoquer une surcharge.
+   Les conséquences business peuvent être : la perte directe de revenus (pas de ventes),         insatisfaction des clients, atteinte à l’image de marque et la perte de clients fidèles       au profit de concurrents.
 
 
-3. Mise en cache. C'est-à-dire réduire les requêtes vers le serveur (ex
-: cache des pages, des images).
+• Donnez au moins 5 solutions pour améliorer la disponibilité du service
 
-4. Auto-scaling(scalabilité automatique).Donc,ajouter automatiquement des ressources (serveurs) en cas de forte
-demande.
+ les 5 solutions pour améliorer la disponibilité du service :
 
 
-5. Surveillance et alertes (monitoring). C'est-à-dire détecter
-rapidement les problèmes et intervenir avant la panne.
+  1. Mise en place d’un équilibrage de charge. C'est-à-dire répartir le
+     trafic sur plusieurs serveurs pour éviter les surcharges.
+
+  2. Protection contre les attaques DDoS. Donc, filtrer le trafic
+     malveillant qui peut provoquer une surcharge.
+
+
+  3. Mise en cache. C'est-à-dire réduire les requêtes vers le serveur (ex: cache des pages,        des images).
+
+   4. Auto-scaling(scalabilité automatique).Donc,ajouter automatiquement des ressources             (serveurs) en cas de forte demande.
+
+
+  5. Surveillance et alertes (monitoring). C'est-à-dire détecter
+     rapidement les problèmes et intervenir avant la panne.
 
 
 
